@@ -1,0 +1,281 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #707070;
+    font-family: sans-serif;
+    background-color: #f8f8f8;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #707070;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* header ---------------------------------- */
+
+.wrapper {
+    max-width: 1200px;
+    padding: 0 24px;
+    margin: 0 auto;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
+}
+
+#header .logo {
+    font-size: 32px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+#header .logo a {
+    display: block;
+}
+
+#header .navi {
+    display: flex;
+    align-items: center;
+}
+
+#header .navi li {
+    font-size: 14px;
+    margin-left: 32px;
+}
+
+/*main-----------------------------------------*/
+
+.mainvisual {
+    margin-bottom: 80px;
+}
+.mainvisual img {
+    display: block;
+    margin: 0 auto;
+}
+.introduction {
+    margin-bottom: 80px;
+    text-align: center;
+}
+.introduction .catchphrase {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/*section--------------------------------*/
+.section-title {
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+.section-title .name {
+    display: block;
+    font-size: 40px;
+}
+.section-title .Birthday {
+    display: block;
+    font-size: 20px;
+}
+
+#profile {
+    position: relative;
+    margin-bottom: 120px;
+}
+
+#profile .img {
+    width: 70%;
+}
+
+#profile .img img {
+    width: 100%;
+    display: block;
+}
+
+#profile .detail {
+    position: absolute;
+    top: 70%;
+    left: 55%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.9);
+    padding: 40px;
+    width: 45%;
+}
+
+#profile .detail p {
+    font-size: 20px;
+    line-height: 2;
+}
+
+
+#personal {
+    margin-bottom: 120px;
+}
+#personal .personal-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#personal .personal-list li {
+    width: 32%;
+    height: 300px;
+    margin: 0 2% 2% 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+#personal .personal-list li:nth-child(3n) {
+    margin-right: 0;
+}
+
+#personal .personal-img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#personal .personal-img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 1;
+}
+
+#personal .personal-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#personal .personal-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 24px;
+    color: #fff;
+    z-index: 2;
+}
+
+#personal .personal-text h3 {
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+#personal .personal-text p {
+    line-height: 1.7;
+}
+
+
+
+/* スマホ */
+
+@media screen and (max-width: 767px) {
+
+    .wrapper {
+        padding: 0 16px;
+    }
+
+    #header {
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    #header .logo {
+        text-align: left;
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    #header .navi {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    #header .navi li {
+        margin: 0;
+    }
+
+    /* main */
+    .mainvisual {
+        margin-bottom: 50px;
+    }
+
+    .introduction {
+        margin-bottom: 50px;
+    }
+
+    .introduction .catchphrase {
+        font-size: 16px;
+    }
+
+    .introduction .text {
+        text-align: left;
+    }
+
+    /* section */
+    .section-title {
+        margin-bottom: 25px;
+    }
+
+    .section-title .name {
+        font-size: 32px;
+    }
+
+    #profile {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #profile .detail {
+        position: static;
+        transform: none;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #profile .img {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    #personal {
+        margin-bottom: 60px;
+    }
+
+    #personal .personal-list {
+        flex-direction: column;
+    }
+
+    #personal .personal-list li {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+}
