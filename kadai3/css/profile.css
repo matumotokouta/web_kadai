@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+/* ======================
+   Profile Main
+====================== */
+
+#profile{
+    padding-top: 180px;
+    padding-bottom: 120px;
+    background: #ddd6f0;
+    clip-path:
+    polygon(0 0,100% 0,100% 94%,0 100%);
+}
+
+#profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* ======================
+   Image
+====================== */
+
+#profile .img{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    background-color: #fff;
+}
+
+#profile .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ======================
+   Detail
+====================== */
+
+.detail{
+    max-width: 550px;
+    background: rgba(255,255,255,.5);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.section-title{
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.name{
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.Birthday{
+    color: #666;
+    font-size: 1rem;
+}
+
+.detail p{
+    line-height: 2;
+}
+
+/* ======================
+   Responsive
+====================== */
+
+@media screen and (max-width:767px){
+
+    #profile{
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding-top: 130px;
+        clip-path: none;
+    }
+
+    #profile .img{
+        width: 220px;
+        height: 220px;
+    }
+
+    .detail{
+        padding: 30px 25px;
+    }
+
+    .name{
+        font-size: 1.8rem;
+    }
+
+}
