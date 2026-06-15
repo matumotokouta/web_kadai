@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+/* ======================
+   Main Section
+====================== */
+
+#personal{
+    margin-top: 90px;
+    padding-top: 170px;
+    padding-bottom: 120px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background: #d8e4f0;
+    clip-path: polygon(0 0,100% 3%,100% 97%,0 100%);
+}
+
+/* ======================
+   Title
+====================== */
+
+.section-title{
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-title .en{
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.section-title .ja{
+    color: #555;
+}
+
+/* ======================
+   List
+====================== */
+
+.personal-list{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    gap: 35px;
+}
+
+/* ======================
+   Card
+====================== */
+
+.personal-list li{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 35px;
+    background: rgba(255,255,255,.55);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+
+/* ======================
+   Image
+====================== */
+
+.personal-img{
+    width: 170px;
+    height: 170px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.personal-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ======================
+   Text
+====================== */
+
+.personal-text h3{
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.personal-text p{
+    line-height: 1.9;
+}
+
+/* ======================
+   Responsive
+====================== */
+
+@media screen and (max-width:767px){
+    #personal{
+        padding-top: 130px;
+        clip-path: none;
+    }
+
+    .section-title{
+        margin-bottom: 45px;
+    }
+
+    .section-title .en{
+        font-size: 2rem;
+    }
+
+    .personal-list li{
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .personal-img{
+        width: 200px;
+        height: 200px;
+    }
+
+}
