@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+/* ========================
+Portfolio Hero
+======================== */
+
+#portfolio{
+    padding-top: 140px;
+    min-height: 100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("../img/portfolio-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    clip-path:
+    polygon(
+        0 0,
+        100% 0,
+        100% 95%,
+        0 100%
+    );
+}
+
+#portfolio .logo{
+    margin-bottom: 60px;
+}
+
+#portfolio .logo h1{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 15px rgba(0,0,0,.4);
+}
+
+.Catchphrase{
+    font-size: 1.4rem;
+    opacity: .9;
+}
+
+/* ========================
+Info Card
+======================== */
+
+.info{
+    max-width: 1000px;
+    margin: 0 auto 60px;
+}
+
+.basic{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+}
+
+.basic .title{
+    background: rgba(255,255,255,.95);
+    color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.15);
+    transition: .3s;
+}
+
+.basic .title:hover{
+    transform: translateY(-5px);
+}
+
+.basic h2{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #4a6fa5;
+}
+
+.explanation{
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* ========================
+Concept
+======================== */
+
+.concept{
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255,255,255,.12);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.concept p{
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    line-height: 2;
+}
+
+.concept p:last-child{
+    margin-bottom: 0;
+}
+
+/* ========================
+Responsive
+======================== */
+
+@media screen and (max-width:767px){
+
+    #portfolio{
+        padding-top: 110px;
+    }
+
+    #portfolio .logo h1{
+        font-size: 2rem;
+    }
+
+    .Catchphrase{
+        font-size: 1rem;
+    }
+
+    .basic{
+        grid-template-columns: 1fr;
+    }
+
+    .basic .title{
+        padding: 25px;
+    }
+
+    .concept{
+        padding: 25px;
+        margin: 0 20px;
+    }
+
+    .concept p{
+        font-size: 1rem;
+    }
+}

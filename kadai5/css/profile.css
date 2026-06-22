@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+/* ======================
+Profile Main
+====================== */
+
+#profile{
+    padding-top:180px;
+    padding-bottom:120px;
+    background:#ddd6f0;
+    clip-path:polygon(0 0,100% 0,100% 94%,0 100%);
+    max-width:1200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:
+    "img detail"
+    "keireki syumi";
+    gap:40px;
+    padding-left:40px;
+    padding-right:40px;
+}
+
+/* ======================
+Image
+====================== */
+
+.img{
+    grid-area:img;
+    justify-self:center;
+}
+
+#profile .img{
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+#profile .img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* ======================
+Detail
+====================== */
+
+.detail{
+    grid-area:detail;
+    background:rgba(255,255,255,.6);
+    padding:40px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.section-title{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-bottom:25px;
+}
+
+.name{
+    font-size:2.2rem;
+    font-weight:bold;
+}
+
+.Birthday{
+    color:#666;
+    font-size:1rem;
+}
+
+.detail p{
+    line-height:2;
+}
+
+/* ======================
+Career
+====================== */
+
+.keireki{
+    grid-area:keireki;
+    background:rgba(255,255,255,.6);
+    padding:35px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.keireki h2{
+    text-align:center;
+    font-size:1.8rem;
+    margin-bottom:30px;
+}
+
+.keireki ul{
+    padding:0;
+}
+
+.keireki li{
+    position:relative;
+    list-style:none;
+    padding-left:55px;
+    margin-bottom:8px;
+    background:none;
+    box-shadow:none;
+    font-size:1.1rem;
+    font-weight:700;
+    min-height:32px;
+    display:flex;
+    align-items:center;
+}
+
+.keireki li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+    width:32px;
+    height:32px;
+    background:linear-gradient(135deg,#7d89d8,#5f6fd1);
+    clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.keireki li::after{
+    content:"📚";
+    position:absolute;
+    left:16px;
+    top:50%;
+    transform:translate(-50%,-50%);
+    font-size:14px;
+    line-height:1;
+    z-index:1;
+}
+
+.keireki p{
+    margin:0 0 25px 55px;
+    color:#666;
+    font-size:.9rem;
+}
+
+/* ======================
+Hobby
+====================== */
+
+.syumi{
+    grid-area:syumi;
+    background:rgba(255,255,255,.6);
+    padding:35px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.syumi h2{
+    text-align:center;
+    font-size:1.8rem;
+    margin-bottom:25px;
+}
+
+.syumi ul{
+    padding:0;
+}
+
+.syumi li{
+    list-style:none;
+    background:#fff;
+    padding:18px 20px;
+    border-radius:12px;
+    margin-bottom:15px;
+    font-weight:bold;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,.06);
+}
+
+/* ======================
+Responsive
+====================== */
+
+@media screen and (max-width:767px){
+
+    #profile{
+        grid-template-columns:1fr;
+        grid-template-areas:
+        "img"
+        "detail"
+        "keireki"
+        "syumi";
+        gap:30px;
+        padding-top:130px;
+        padding-left:20px;
+        padding-right:20px;
+        clip-path:none;
+    }
+
+    #profile .img{
+        width:220px;
+        height:220px;
+        margin:0 auto;
+    }
+
+    .detail,
+    .keireki,
+    .syumi{
+        padding:25px;
+    }
+
+    .name{
+        font-size:1.8rem;
+    }
+
+    .keireki h2,
+    .syumi h2{
+        font-size:1.5rem;
+    }
+
+    .keireki p{
+        margin-left:10px;
+        font-size:.85rem;
+    }
+}
