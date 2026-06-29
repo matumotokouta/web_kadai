@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+/* ポートフォリオ */
+.portfolio-section{
+    max-width:1000px;
+    margin:0 auto 80px;
+}
+
+.portfolio-section h2{
+    margin-bottom:40px;
+}
+
+/* 作品情報カード */
+.portfolio-card{
+    position:relative;
+}
+
+.portfolio-card::before{
+    content:"PORTFOLIO";
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-family:"Roboto",sans-serif;
+    font-size:0.9rem;
+    letter-spacing:0.2em;
+    color:#c7c7ff;
+}
+
+.portfolio-card table{
+    width:100%;
+}
+
+.portfolio-card th{
+    width:30%;
+    background:#eef0ff;
+}
+
+/* 動画 */
+.movie-section{
+    max-width:1000px;
+    margin:0 auto;
+}
+
+.movie-section h2{
+    margin-bottom:40px;
+}
+
+.video-wrapper{
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.video-wrapper iframe{
+    display:block;
+    width:100%;
+    height: 500px;
+}
+
+/* レスポンシブ */
+@media screen and (max-width:767px){
+
+    .portfolio-section h2,
+    .movie-section h2{
+        margin-bottom:30px;
+    }
+
+    .portfolio-card::before{
+        position:static;
+        display:block;
+        margin-bottom:15px;
+    }
+
+    .portfolio-card th,
+    .portfolio-card td{
+        padding:10px;
+    }
+
+    .video-wrapper iframe {
+        height: 250px;
+    }
+}

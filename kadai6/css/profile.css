@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+/* プロフィール */
+.profile-section{
+    max-width:1000px;
+    margin:0 auto;
+}
+
+.profile-section h2{
+    margin-bottom:40px;
+}
+
+/* 画像 */
+.profile-image{
+    flex:0 0 300px;
+}
+
+.profile-image img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:50%;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* テーブル */
+.profile-table{
+    flex:1;
+}
+
+.profile-table table{
+    background:#ffffff;
+}
+
+.profile-table th{
+    background:#eef0ff;
+}
+
+/* 自己紹介 */
+.self-introduction{
+    max-width:1000px;
+    margin:0 auto;
+}
+
+.self-introduction .card{
+    position:relative;
+}
+
+.self-introduction .card::before{
+    content:"PROFILE";
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-family:"Roboto",sans-serif;
+    font-size:0.9rem;
+    color:#c7c7ff;
+    letter-spacing:0.2em;
+}
+
+.self-introduction h2{
+    text-align:left;
+    margin-bottom:20px;
+}
+
+/* レスポンシブ */
+@media screen and (max-width:767px){
+
+    .profile-image{
+        flex:0 0 auto;
+        width:220px;
+    }
+
+    .profile-section h2{
+        margin-bottom:30px;
+    }
+
+}
