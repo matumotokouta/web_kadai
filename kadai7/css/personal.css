@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+/* パーソナル */
+.personal-section{
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.personal-section h2{
+    margin-bottom:40px;
+}
+
+/* カード */
+.personal-card{
+    overflow:hidden;
+    transition:0.3s;
+    padding:0;
+}
+
+.personal-card:hover{
+    transform:translateY(-8px);
+}
+
+.personal-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+/* テキスト */
+.personal-card h3{
+    padding:20px 20px 10px;
+}
+
+.personal-card p{
+    padding:0 20px 20px;
+}
+
+/* 疑似要素 */
+.personal-card h3::before{
+    content:"★";
+    margin-right:6px;
+    color:#9a9cff;
+}
+
+/* 偶数カード */
+.personal-card:nth-child(even){
+    background:linear-gradient(
+        135deg,
+        #ffffff,
+        #f4f2ff
+    );
+}
+
+/* 奇数カード */
+.personal-card:nth-child(odd){
+    background:linear-gradient(
+        135deg,
+        #ffffff,
+        #eef5ff
+    );
+}
+
+/* ページネーション */
+.pagination{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:50px;
+}
+
+.pagination a{
+    width:45px;
+    height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    border:1px solid #d9dcff;
+    background:#fff;
+    transition:.3s;
+}
+
+.pagination a:hover{
+    background:#eef0ff;
+}
+
+/* レスポンシブ */
+@media screen and (max-width:767px){
+
+    .personal-section h2{
+        margin-bottom:30px;
+    }
+
+    .personal-card img{
+        height:200px;
+    }
+
+}

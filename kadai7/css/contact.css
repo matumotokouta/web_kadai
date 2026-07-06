@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/* お問い合わせ */
+.contact-section{
+    max-width:800px;
+    margin:0 auto;
+}
+
+.contact-section h2{
+    margin-bottom:40px;
+}
+
+/* フォーム */
+.contact-form{
+    background:#ffffff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* フォームグループ */
+.form-group{
+    margin-bottom:25px;
+}
+
+/* ラベル（疑似クラス） */
+label{
+    display:block;
+    margin-bottom:10px;
+    font-weight:700;
+}
+
+/* 入力 */
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #cfd3ff;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+/* フォーカス */
+input:focus,
+textarea:focus{
+    outline:none;
+    border-color:#8f8cff;
+    box-shadow:0 0 0 3px rgba(143,140,255,0.2);
+}
+
+/* 属性セレクター */
+input[type="text"],
+input[type="email"]{
+    background:#fff;
+}
+
+/* 送信ボタン */
+.submit-area{
+    text-align:center;
+}
+
+button[type="submit"]{
+    padding:12px 40px;
+    border:none;
+    border-radius:999px;
+    background:linear-gradient(135deg,#b5c7ff,#cdb8ff);
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* 疑似クラス */
+button[type="submit"]:hover{
+    transform:translateY(-3px);
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* レスポンシブ */
+@media screen and (max-width:767px){
+
+    .contact-form{
+        padding:25px;
+    }
+
+}
