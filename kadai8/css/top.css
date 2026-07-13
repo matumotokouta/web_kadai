@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+/* メインビジュアル */
+.mainvisual{
+    background-image:url("../img/らだお壁紙.jfif");
+    background-position:center;
+    background-size:cover;
+    background-attachment:fixed;
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 90%,
+        90% 95%,
+        80% 90%,
+        70% 95%,
+        60% 90%,
+        50% 95%,
+        40% 90%,
+        30% 95%,
+        20% 90%,
+        10% 95%,
+        0 90%
+    );
+}
+
+.mainvisual img{
+    width:100%;
+    height: 100%;
+    object-fit:cover;
+    display: block;
+}
+
+/* テキスト */
+.mainvisual-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#ffffff;
+    z-index:1;
+}
+
+.mainvisual-text p{
+    font-size:1.3rem;
+    letter-spacing:0.1em;
+}
+
+.mainvisual-text h2{
+    margin-top:10px;
+    margin-bottom:0;
+    font-size:4rem;
+    font-family:"Roboto",sans-serif;
+}
+
+/* ページ案内 */
+.page-guide{
+    margin-top:80px;
+}
+
+.guide-card{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    min-height:250px;
+}
+
+.guide-card h3{
+    margin-bottom:15px;
+    text-align:center;
+}
+
+.guide-card p{
+    flex:1;
+    text-align: center;
+}
+
+.guide-card a{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 24px;
+    align-self:center;
+    border-radius:999px;
+    background:linear-gradient(
+        135deg,
+        #b8c9ff,
+        #d0c0ff
+    );
+}
+
+/* 疑似要素 */
+.guide-card h3::before{
+    content:"◆";
+    color:#9a9cff;
+    margin-right:6px;
+}
+
+/* レスポンシブ */
+@media screen and (max-width:767px){
+
+    .mainvisual{
+        background-attachment:scroll;
+        height: 500px;
+        padding: 0;
+        margin-bottom: 0;
+        clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 86%,
+            80% 94%,
+            60% 86%,
+            40% 94%,
+            20% 86%,
+            0 94%
+        );
+    }
+
+    .mainvisual-text h2{
+        font-size:2.5rem;
+    }
+
+    .mainvisual-text p{
+        font-size:1rem;
+    }
+
+    .guide-card p .guid-p {
+        display: none;
+    }
+    .reverse-card{
+        flex-direction:column;
+    }
+}
