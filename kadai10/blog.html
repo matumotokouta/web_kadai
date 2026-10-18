@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>ブログ | 私について</title>
+        <meta name="description" content="自己紹介サイトを作る">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Yomogi&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/blog.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/jquery.inview.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <header id="index_head">
+            <div class="daimei">
+                <a href="index.html">私のサイト</a>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="navi">
+                <ul class="menu">
+                    <li><a href="profile.html">プロフィール</a></li>
+                    <li><a href="portfolio.html">成果物</a></li>
+                    <li><a href="blog.html">ブログ</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="mainvisual-area">
+            <div class="mainvisual">
+                <div class="visualtext">
+                    <h1>ブログ</h1>
+                    <p>日々の日常について</p>
+                </div>
+            </div>
+        </section>
+
+        <main class="blog-main">
+            <div class="blog-container">
+                <div class="blog-grid" id="blog-grid">
+                    
+                    <!-- 記事カード 1 -->
+                    <article class="memo-card">
+                        <a href="blog_001.html" class="memo-link">
+                            <h2 class="memo-title">ポートフォリオの進捗</h2>
+                            <p class="memo-excerpt">最初のメインページからお問い合わせまで何とか終わらせることができました。</p>
+                            
+                            <div class="memo-bottom">
+                                <span class="memo-date">2026.10.15</span>
+                                <span class="memo-more">読む &gt;</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- 記事カード 2 -->
+                    <article class="memo-card">
+                        <a href="blog_002.html" class="memo-link">
+                            <h2 class="memo-title">応用情報の勉強</h2>
+                            <p class="memo-excerpt">応用情報の試験日を11/1で申し込みしました。</p>
+                            
+                            <div class="memo-bottom">
+                                <span class="memo-date">2026.10.15</span>
+                                <span class="memo-more">読む &gt;</span>
+                            </div>
+                        </a>
+                    </article>
+
+                </div>
+
+                <!-- ページネーション（10件を超える場合に切り替え） -->
+                <div class="pagination" id="pagination">
+                    <span class="page-number active">1</span>
+                    <a href="?page=2" class="page-number">2</a>
+                    <a href="?page=2" class="next">次へ &raquo;</a>
+                </div>
+            </div>
+        </main>
+        
+        <footer id="footer">
+            <div class="footer_box">
+                <div class="footerlogo">
+                    <a href="">私のサイト</a>
+                </div>
+                <ul class="menu">
+                    <li><a href="profile.html">プロフィール</a></li>
+                    <li><a href="portfolio.html">成果物</a></li>
+                    <li><a href="blog.html">ブログ</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+            <p class="copyright">© 宮崎情報ビジネス専門学校</p>
+        </footer>
+    </body>
+</html>

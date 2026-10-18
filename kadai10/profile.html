@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>私について</title>
+        <meta name="description" content="自己紹介サイトを作る">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Yomogi&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/profile.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/jquery.inview.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <header id="index_head">
+            <div class="daimei">
+                <a href="index.html">私のサイト</a>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="navi">
+                <ul class="menu">
+                    <li><a href="profile.html">プロフィール</a></li>
+                    <li><a href="portfolio.html">成果物</a></li>
+                    <li><a href="blog.html">ブログ</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="mainvisual-area">
+            <div class="mainvisual">
+                <div class="visualtext">
+                    <h1>プロフィール</h1>
+                    <p>サイト主です</p>
+                </div>
+            </div>
+        </section>
+        <main class="profile-page">
+            <div class="profile-container">
+
+                <!-- 1. 基本情報 ＆ 自己紹介 -->
+                <section class="profile-card main-info-card">
+                    <div class="profile-avatar">
+                        <!-- プロフィール画像やイラストがあればここに入れます -->
+                        <img src="img/matsubokkuri.png" alt="マツモト コウタ">
+                    </div>
+                    <div class="profile-details">
+                        <span class="card-label label-blue">01</span>
+                        <h2>松元　康汰</h2>
+                        <p>まつもと　こうた</p>
+                        <p class="belonging">宮崎情報ビジネス専門学校</p>
+                        <p class="intro-text">
+                            Web制作やゲーム制作をしています。<br>
+                            みんなに楽しんで使えるようなサイトやゲームを作れるように勉強しています
+                        </p>
+                        <div class="hobby-area">
+                            <span class="hobby-title">趣味・関心</span>
+                            <p>ゲーム / 音楽</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. スキルセット -->
+                <section class="profile-section">
+                    <div class="section-header">
+                        <span class="card-label label-green">02</span>
+                        <h2>現在学習していること</h2>
+                    </div>
+                    <div class="skill-grid">
+                        <div class="skill-card">
+                            <h3>HTML / CSS</h3>
+                            <p>レスポンシブ対応や、簡単なアニメーションなどを作ることができます</p>
+                        </div>
+                        <div class="skill-card">
+                            <h3>C#</h3>
+                            <p>簡単なプログラムなどを作ることができます</p>
+                        </div>
+                        <div class="skill-card">
+                            <h3>Git / GitHub</h3>
+                            <p>基本的なコードのバージョン管理や成果物の管理で使用しています。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. 今後の目標・やってみたいこと -->
+                <section class="profile-card goal-card">
+                    <span class="card-label label-orange">03</span>
+                    <h2>今後の目標・やってみたいこと</h2>
+                    <p>
+                        現在作成しているゲーム開発を進めたいと思ってます。<br>
+                        またみんなの役に立つようなソフトを作りたいと思っています。
+                    </p>
+                </section>
+
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="footer_box">
+                <div class="footerlogo">
+                    <a href="index.html">私のサイト</a>
+                </div>
+                <ul class="menu">
+                    <li><a href="profile.html">プロフィール</a></li>
+                    <li><a href="portfolio.html">成果物</a></li>
+                    <li><a href="blog.html">ブログ</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+            <p class="copyright">© 宮崎情報ビジネス専門学校</p>
+        </footer>
+    </body>
+</html>

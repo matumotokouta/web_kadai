@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+/* プロフィール全体 */
+.profile-page {
+    padding: 120px 0 100px; /* ヘッダーの高さを考慮した余白 */
+    width: min(900px, 90%);
+    margin: 0 auto;
+}
+
+/* ページタイトル */
+.profile-title {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.profile-title h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+.profile-title p {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+/* カード共通スタイル（トップページのカードと統一） */
+.profile-card, .skill-card {
+    position: relative;
+    background: #fff;
+    color: #333;
+    padding: 35px 40px;
+    box-shadow: 8px 10px 0 rgba(0, 0, 0, 0.16);
+    margin-bottom: 50px;
+}
+
+/* シール風テープの疑似要素 */
+.profile-card::before, .section-header::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    width: 105px;
+    height: 27px;
+    transform: translateX(-50%) rotate(-2deg);
+    background: rgba(255, 255, 255, 0.75);
+    z-index: 10;
+    pointer-events: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ラベルの色（top.cssで設定した色と統一） */
+.card-label {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+.label-blue { background-color: #4A6B82; }
+.label-green { background-color: #5B8C7A; }
+.label-orange { background-color: #C87D55; }
+
+
+
+/* 1. 基本情報カード */
+.main-info-card {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.profile-avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: #eee;
+    border: 4px solid #7A8B99;
+}
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profile-details h2 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+.profile-details .belonging {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0 15px;
+}
+.profile-details .intro-text {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.hobby-area {
+    background: #f5f7f9;
+    padding: 12px 18px;
+    border-radius: 6px;
+}
+.hobby-title {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 4px;
+}
+.hobby-area p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* 2. スキルセット */
+.profile-section {
+    margin-bottom: 60px;
+}
+.section-header {
+    position: relative;
+    text-align: left;
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 8px 10px 0 rgba(0, 0, 0, 0.16);
+}
+.section-header h2 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+.skill-card {
+    margin-bottom: 0;
+    padding: 25px 30px;
+}
+.skill-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+    color: #4A6B82;
+    border-bottom: 2px dashed #4A6B82;
+    padding-bottom: 5px;
+}
+.skill-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* 3. 目標カード */
+.goal-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+.goal-card p {
+    line-height: 1.8;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 767px) {
+    .profile-page {
+        padding-top: 90px;
+    }
+    .main-info-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .profile-avatar {
+        width: 120px;
+        height: 120px;
+    }
+    .hobby-area {
+        text-align: left;
+    }
+}

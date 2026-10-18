@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>私について</title>
+        <meta name="description" content="自己紹介サイトを作る">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="">
+        <link rel="apple-touch-icon" href="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Yomogi&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/portfolio.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="js/jquery.inview.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <header id="index_head">
+            <div class="daimei">
+                <a href="index.html">私のサイト</a>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="navi">
+                <ul class="menu">
+                    <li><a href="profile.html">プロフィール</a></li>
+                    <li><a href="portfolio.html">成果物</a></li>
+                    <li><a href="blog.html">ブログ</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="mainvisual-area">
+            <div class="mainvisual">
+                <div class="visualtext">
+                    <h1>制作物</h1>
+                    <p>現在制作中のゲームプロジェクトについて</p>
+                </div>
+            </div>
+        </section>
+
+        <main class="portfolio-container">
+
+            <!-- バインダーの外枠を追加 -->
+            <div class="binder-base">
+
+                <article class="work-card">
+                    
+                    <div class="work-header">
+                        <span class="status-badge">開発中 (WIP)</span>
+                        <h2 class="work-title">オープンワールドゲーム</h2>
+                    </div>
+
+                    <div class="work-content">
+                        
+                        <!-- ① ゲーム概要・コンセプト -->
+                        <section class="info-section">
+                            <h3>ゲーム概要・コンセプト</h3>
+                            <p>
+                                プレイヤーが同時接続し、画像や動画などをみんなで見るスローライフ的なワールドを目的として作っています。
+                            </p>
+                        </section>
+
+                        <!-- ② 使用技術・環境 -->
+                        <section class="info-section">
+                            <h3>使用技術・環境</h3>
+                            <ul class="tech-tags">
+                                <li>Unity</li>
+                                <li>Photon Fusion2</li>
+                                <li>C#</li>
+                                <li>Git / GitHub</li>
+                                <li>VSCode</li>
+                            </ul>
+                        </section>
+
+                        <!-- ③ 進捗・予定 -->
+                        <section class="info-section">
+                            <h3>進捗・予定</h3>
+                            <ul class="progress-list">
+                                <li class="done">プレイヤーの基本操作</li>
+                                <li class="done">画像の生成</li>
+                                <li class="doing">マップの作成</li>
+                                <li class="doing">UIの作成</li>
+                                <li class="todo">マルチの設定</li>
+                            </ul>
+                        </section>
+
+                    </div>
+                </article>
+
+            </div>
+        </main>
+        
+        <footer id="footer">
+            <div class="footer_box">
+                <div class="footerlogo">
+                    <a href="">私のサイト</a>
+                </div>
+                <ul class="menu">
+                    <li><a href="profile.html">プロフィール</a></li>
+                    <li><a href="portfolio.html">成果物</a></li>
+                    <li><a href="blog.html">ブログ</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+            <p class="copyright">© 宮崎情報ビジネス専門学校</p>
+        </footer>
+    </body>
+</html>
