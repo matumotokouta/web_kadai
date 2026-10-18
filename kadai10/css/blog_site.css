@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+/* メインエリア全体の余白と最大幅 */
+.article-main {
+    padding: 80px 20px 120px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* メモ帳・便箋風の大枠カード */
+.article-container {
+    position: relative;
+    background-color: #fffef2; /* 優しいクリーム色 */
+    box-shadow: 6px 8px 20px rgba(0, 0, 0, 0.18);
+    padding: 60px 50px;
+    box-sizing: border-box;
+    border-radius: 2px;
+
+    /* 便箋風の薄い横線背景 */
+    background-image: repeating-linear-gradient(
+        #fffef2,
+        #fffef2 31px,
+        #e5e3d5 32px
+    );
+}
+
+/* 上部の大きなテープ装飾 */
+.article-container::before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-0.5deg);
+    width: 140px;
+    height: 34px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-left: 3px dashed rgba(210, 210, 210, 0.6);
+    border-right: 3px dashed rgba(210, 210, 210, 0.6);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* 記事ヘッダー */
+.article-header {
+    border-bottom: 2px dashed #C87D55; /* テラコッタカラーの破線 */
+    padding-bottom: 20px;
+    margin-bottom: 35px;
+}
+
+.article-date {
+    display: inline-block;
+    font-size: 0.95rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.article-title {
+    font-size: 2rem;
+    color: #2b2b2b;
+    line-height: 1.4;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* アイキャッチ画像 */
+.article-eyecatch {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.article-eyecatch img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* 記事本文スタイル */
+.article-body {
+    font-size: 1.05rem;
+    line-height: 2;
+    color: #333;
+}
+
+.article-body p {
+    margin-bottom: 24px;
+}
+
+/* 本文内の見出し（h2）- 付箋メモ風の見出し */
+.article-body h2 {
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: #5B8C7A; /* 成果物等と合わせたセージグリーン */
+    padding: 8px 18px;
+    margin: 40px 0 20px;
+    display: inline-block;
+    border-radius: 2px;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15);
+    transform: rotate(-0.5deg);
+}
+
+/* 本文内の見出し（h3） */
+.article-body h3 {
+    font-size: 1.2rem;
+    color: #C87D55;
+    border-left: 4px solid #C87D55;
+    padding-left: 10px;
+    margin: 30px 0 15px;
+}
+
+/* 本文内のリスト */
+.article-body ul, 
+.article-body ol {
+    margin: 0 0 24px 20px;
+    padding: 0;
+}
+
+.article-body ul li {
+    list-style-type: disc;
+    margin-bottom: 8px;
+}
+
+/* 記事フッター・ナビゲーション */
+.article-footer {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px dashed #d5d3c1;
+}
+
+.article-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.article-nav a,
+.article-nav span {
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.article-nav a {
+    background-color: #fff;
+    color: #1f1f1f;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.article-nav a:hover {
+    background-color: #4A6B82;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.article-nav .nav-back {
+    background-color: #333;
+    color: #fff;
+}
+
+.article-nav .nav-back:hover {
+    background-color: #555;
+}
+
+.article-nav .disabled {
+    color: #aaa;
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: none;
+}
+
+/* 767px以下のスマホ表示対応 */
+@media screen and (max-width: 767px) {
+    .article-main {
+        padding: 50px 15px 80px;
+    }
+
+    .article-container {
+        padding: 40px 20px 30px;
+    }
+
+    .article-title {
+        font-size: 1.5rem;
+    }
+
+    .article-body {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    .article-body h2 {
+        font-size: 1.2rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .article-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .article-nav a,
+    .article-nav span {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}

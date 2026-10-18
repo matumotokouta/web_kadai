@@ -1,0 +1,263 @@
+@charset "UTF-8";
+
+/* 全ページ共通の仕様 */
+html {
+    font-size: 100%;
+}
+body {
+    color: #1f1f1f;
+    background-color: #7A8B99;
+    font-family: "Zen Kurenaido", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+li {
+    list-style: none;
+}
+a {
+    color: #1f1f1f;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+a:hover {
+    opacity: 0.7;
+}
+iframe {
+    vertical-align: bottom;
+}
+
+/* ヘッダー */
+
+#index_head {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 0 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+#index_head .daimei {
+    max-width: 220px;
+    margin: 0;
+}
+#index_head .daimei a {
+    display: block;
+    color: #fff;
+    font-size: 36px;
+}
+#index_head .hamburger {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 20;
+}
+#index_head .hamburger span {
+    width: 30px;
+    height: 2px;
+    background-color: #121212;
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    transition: all 0.4s;
+}
+#index_head .hamburger.active {
+    background-color: #121212;
+}
+#index_head .hamburger span:nth-of-type(1) {
+    top: 19px;
+}
+#index_head .hamburger span:nth-of-type(2) {
+    top: 28px;
+}
+#index_head .hamburger span:nth-of-type(3) {
+    top: 37px;
+}
+#index_head .hamburger.active span:nth-of-type(1){
+    top: 29px;
+    transform: rotate(-45deg);
+    background-color: #fff;
+}
+#index_head .hamburger.active span:nth-of-type(2){
+    opacity: 0;
+}
+#index_head .hamburger.active span:nth-of-type(3){
+    top: 29px;
+    transform: rotate(45deg);
+    background-color: #fff;
+}
+#index_head .navi {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+}
+#index_head .navi.active {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.6s;
+}
+#index_head .navi .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    gap: 30px;
+}
+#index_head .navi .menu li a {
+    font-size: 24px;
+}
+
+/* メイン */
+.mainvisual {
+    width: 100%;
+    height: 60vh; /* 表示したい高さ（画面高さの60%など） */
+    background-image: url('../img/らだお壁紙.jfif');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    clip-path: polygon(0% 0%,100% 0%,100% 80%,50% 100%,0% 80%);
+}
+.mainvisual::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.visualtext {
+    position: absolute;
+    left: 50%;
+    bottom: 25%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+.visualtext h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+.visualtext p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* フッター */
+#footer {
+    text-align: center;
+    padding: 60px 20px 30px;
+    background-image: url('../img/らだお壁紙.jfif');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    isolation: isolate;
+}
+#footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 0;
+}
+#footer > * {
+    position: relative;
+    z-index: 1;
+}
+
+#footer .footer_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+#footer .footerlogo a {
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+}
+
+#footer .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#footer .menu li a {
+    font-size: 20px;
+    color: #fff;
+}
+
+#footer .copyright {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+/* スマホ */
+@media screen and (max-width: 767px) {
+/* ヘッダー */
+    #index_head {
+        height: 60px;
+        padding: 0 20px;
+    }
+
+    #index_head .daimei {
+        max-width: 180px;
+        font-size: 20px;
+    }
+
+/* メイン */
+    .mainvisual {
+        height: 400px;
+        background-attachment: scroll;
+    }
+    .visualtext {
+        bottom: 40%;
+        white-space: normal;
+        width: 90%;
+    }
+
+/* フッター */
+    #footer .footer_box {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #footer .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
